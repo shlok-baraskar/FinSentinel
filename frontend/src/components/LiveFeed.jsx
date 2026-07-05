@@ -1,6 +1,6 @@
 import { useEffect, useRef, useCallback } from 'react'
 
-const WS_URL = 'ws://localhost:8000/api/v1/ws'
+const WS_URL = import.meta.env.VITE_WS_URL || 'ws://localhost:8000/api/v1/ws'
 
 export function useLiveFeed(onTransaction) {
   const wsRef          = useRef(null)
